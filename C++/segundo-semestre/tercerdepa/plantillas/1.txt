@@ -1,0 +1,26 @@
+una plantilla no es una propiedad de la P.O.O, por lo que puede ser utilizada
+en programacion estructurada y no necesariamente con clases.
+la plantilla se refiere al hecho de que un tipo de dato se puede adaptar
+a cualquier forma de tipo de dato
+
+ejemplo 
+
+template <class x>  // notese que no es class de POO
+
+void intercambiar (X a, X b){
+
+X c;
+c = a;
+a = b; 
+b = C
+}
+
+main(){
+
+clrscr();
+
+    int i = 1, j = 2;
+    float k = 2.5, m = 10.9;
+	intercambiar(i,j);
+cout << "i=" << i << "\n j=" << j << endl;
+}

@@ -1,0 +1,1 @@
+1.- programa que convierte cada caracter de una cadena en su valor ascii, octal, hexadecimal y binario.

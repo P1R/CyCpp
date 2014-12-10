@@ -1,0 +1,29 @@
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#define K 9e+9
+
+float Ley_de_Coulomb (float, float, float);
+
+float Ley_de_Coulomb (float carga_uno,float carga_dos,float distancia)
+{
+	float Fuerza;
+	Fuerza= ((carga_uno*carga_dos)/pow(distancia,2))*K;
+	return Fuerza;
+}
+
+main ()
+{
+	float carga_uno,carga_dos,distancia;
+   cout<<"Fuerza de atraccion/repulsion entre dos cargas"<<endl;
+   cout<<endl;
+   cout<<"Da Primer carga"<<endl;
+   cin>>carga_uno;
+   cout<<"Da Segunda carga"<<endl;
+   cin>>carga_dos;
+   cout<<"Dar distancia"<<endl;
+   cin>>distancia;
+   cout<<"La Fuerza es: "<<Ley_de_Coulomb (carga_uno,carga_dos,distancia)<<endl;
+
+   getch();
+}

@@ -1,0 +1,65 @@
+*Inserción al final de la Lista
+Para la insercion dal final de la lista normalmente es necesario recorrerla
+por completo.
+
+El algoritmo a seguir es el siguiente:
+    1. Asignar al nuevo nodo.
+    2. Econtrar el ultimo elementro de la lista.
+    3. Activar el campo siguiente del ultimo.
+	elemento.
+    4. Apuntar campo siguiente al elemento a insertar.
+
+Ejemplo:
+    Insertar Nodo 75 al final de la lista:
+    
+     ___      _____     ______     ________
+    |___|--> |10|.-|--> |25|.-|--> |40|NULL|
+    
+    cabecera ptr
+    
+Paso 1
+
+     ___      _____
+    |___|--> |75|  |
+    
+    insertar_ptr
+    
+Código
+    insertar_ptr=new Nodo;
+    
+Paso 2
+			     ___
+			    |___| anterior_ptr
+			      \
+     ___      _____     ______ \    _______
+    |___|--> |10|.-|--> |25|.-|--> |40|NULL|
+    
+Paso 3 y 4
+
+			     ___
+			    |___| anterior_ptr
+			      \
+     ___      _____     ______ \    _______       _____
+    |___|--> |10|.-|--> |25|.-|--> |40|NULL| --> |75|  |
+Código
+
+    insertar_ptr -> siguiente = NULL;
+    anterior_ptr -> siguiente = insertar_ptr;
+    
+*Busqueda de un Elemento:
+
+El algoritmo de búsqueda utiliza una variable puntero llamada indice
+que va recorriendo la lista nodo a nodo.
+
+Mediante un bucle, Indice apunta a los NOdos de la lista y cuando encuentra 
+el nodo indicado devuelve eun puntero con la sentencia return.
+
+Nodo * BuscaLista(Nodo *cabeza_ptr, const Nodo::Item destrino)
+	{
+	    Nodo *Indice;
+	    for(Indice=cabeza-ptr; Indice != NULL; Indice = Indice -> siguiente){
+		if(destino == Indice -> dato)
+		    return Indice;
+	    }
+	    return NULL;
+	}

@@ -1,0 +1,67 @@
+#include<stdlib.h>
+main(){
+ /* Lluvia en C - http://groups.msn.com/Anarchyp, CETis 53, 2005,
+  Hern ndez Pacheco Miguel, jmiguelhp@hotmail.com */
+ int y,x,c,z[9];
+ clrscr();
+ for(c=0;c<=8;c++){
+  z[c]=rand(79)+1;
+ }
+ for(y=1,x=1;y<=28;y++){
+  z[9]=80-x;
+  clrscr();
+  gotoxy(25,23);
+  textcolor(15);cprintf("RAIN IN C - AnarchyPunk - bY JF");
+  if(y<=27){
+   gotoxy(x,y-2);ln1();
+   for(c=0;c<=9;c++){
+    gotoxy(z[c],y-(c+6));ln1();
+   }
+  }
+  if(y<=26){
+   gotoxy(x,y-1);ln2();
+   for(c=0;c<=9;c++){
+    gotoxy(z[c],y-(c+5));ln2();
+   }
+  }
+  if(y<=25){
+   gotoxy(x,y);ln3();
+   for(c=0;c<=9;c++){
+    gotoxy(z[c],y-(c+4));ln3();
+   }
+  }
+  textcolor(16);
+  delay(2000);
+  if(y==28){
+   y=1;
+   x+=2;
+   for(c=0;c<=8;c++){
+    if(x<=20){
+     z[c]+=rand(4);
+    }
+    else if((x>20)&&(x<=40)){
+     z[c]-=rand(4);
+    }
+   }
+   if(x==81){
+    break;
+   }
+   else{
+    continue;
+   }
+  }
+ }
+ while(!kbhit());
+}
+ln1(){
+ textcolor(8);imp();
+}
+ln2(){
+ textcolor(7);imp();
+}
+ln3(){
+ textcolor(15);imp();
+}
+imp(){
+ cprintf("|");
+}

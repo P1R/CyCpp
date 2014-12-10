@@ -1,0 +1,103 @@
+#include <iostream.h>
+#include <conio.h>
+#define K 9000000000
+
+//Declaracion de las funciones
+float Corriente (float,float);
+float Voltaje (float,float);
+float Resistencia (float,float);
+float Ley_de_Coulomb (float, float, float);
+
+//Definicion de las funciones
+float Corriente (float v,float r)
+{
+	float resultado;
+	resultado= v/r;
+	return resultado;
+}
+float Voltaje (float i,float res)
+{
+	float resultado;
+	resultado= i*res;
+	return resultado;
+}
+float Resistencia (float vol,float corr)
+{
+	float resultado;
+	resultado= vol/corr;
+	return resultado;
+}
+float Ley_de_Coulomb (float carga_uno,float carga_dos,float distancia)
+{
+	float Fuerza;
+	Fuerza= ((carga_uno*carga_dos)/(distancia*distancia))*K;
+	return Fuerza;
+}
+
+main()
+{
+
+  int opcion;
+  float v,r;
+  float i,res;
+  float vol,corr;
+  float carga_uno,carga_dos,distancia;
+
+  cout<<"Elegir Opcion"<<endl;
+  cout<<" "<<endl;
+  cout<<"1. Opcion Corriente"<<endl;
+  cout<<"2. Opcion Voltaje"<<endl;
+  cout<<"3. Opcion Resistencia"<<endl;
+  cout<<"4. Opcion Ley de Coulomb"<<endl;
+  cout<<endl;
+  cin>>opcion;
+  cout<<endl;
+
+  if(opcion==1)
+   {
+  	cout<<"Formula para la Corriente: I=V/R"<<endl;
+   cout<<" "<<endl;
+   cout<<"Dar Voltaje"<<endl;
+	cin>> v;
+	cout<<"Dar Resistencia"<<endl;
+	cin>> r;
+	cout<<"La corriente es "<<Corriente (v,r);
+   }
+
+  if(opcion==2)
+  {
+   cout<<"Formula para el Voltaje: V=I*R"<<endl;
+   cout<<" "<<endl;
+	cout<<"Dar Corriente"<<endl;
+	cin>> i;
+	cout<<"Dar Resistencia"<<endl;
+	cin>> res;
+	cout<<"El Voltaje es "<<Voltaje (i,res);
+   }
+
+  if(opcion==3)
+  {
+  	cout<<"Formula para la Resistencia: R=V/I"<<endl;
+   cout<<" "<<endl;
+	cout<<"Dar Voltaje"<<endl;
+	cin>> vol;
+	cout<<"Dar Corriente"<<endl;
+	cin>> corr;
+	cout<<"La resistencia es "<<Resistencia (vol,corr);
+   }
+
+   if(opcion==4)
+  {
+  	cout<<"Fuerza de atraccion/repulsion entre dos cargas"<<endl;
+   cout<<endl;
+   cout<<"Da Primer carga"<<endl;
+   cin>>carga_uno;
+   cout<<"Da Segunda carga"<<endl;
+   cin>>carga_dos;
+   cout<<"Dar distancia"<<endl;
+   cin>>distancia;
+   cout<<"La Fuerza es: "<<Ley_de_Coulomb (carga_uno,carga_dos,distancia)<<endl;
+   }
+
+  getch();
+}

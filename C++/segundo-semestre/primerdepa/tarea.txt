@@ -1,0 +1,5 @@
+De mi articulo favorito elaborar 
+una estructura con sus caracteristicas 
+su las funciones leer e inmprimir
+elabora un progrmama principal que lea e imprima los datos de N 
+articulos de manera dinamica.

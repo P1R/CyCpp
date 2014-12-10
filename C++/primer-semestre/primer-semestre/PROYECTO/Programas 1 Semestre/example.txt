@@ -1,0 +1,174 @@
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#define G 6.67e-11
+#define M 5.98e+24
+#define R 6.37e+6
+
+//declaracion de la funcion
+float Velocidad (float);
+
+//definicion de la funcion
+float Velocidad (float altura)
+{
+	float Velocidad;
+	Velocidad= sqrt((2*G*M*((R+altura)-R))/(R*(R+altura)));
+   return Velocidad;
+}
+
+//Llamar a la funcion
+
+main()
+
+{
+   cout<<"Velocidad a la que impacta un objeto (en funcion de su altura)"<<endl;
+	cout<<endl;
+   float altura;
+	cout<<"Introduce la altura"<<endl;
+	cin>> altura;
+	cout<<"La velocidad es: "<<Velocidad (altura)<<endl;
+	getch();
+}
+
+
+//Bibliotecas
+
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#define PI 3.1416
+
+//Declaracion de la funcion
+
+float Volumen_Cilindro (float, float);
+
+//Definicion de la funcion
+
+float Volumen_Cilindro (float radio, float altura)
+{
+	float Volumen;
+   Volumen=PI*radio*radio*altura;
+   return Volumen;
+}
+
+//Llamar a la funcion
+
+main ()
+{
+	float radio, altura;
+   cout<<"Volumen de un Cilindro"<<endl;
+   cout<<"Dar Radio"<<endl;
+   cin>>radio;
+   cout<<"Dar Altura"<<endl;
+   cin>>altura;
+   cout<<"El Volumen es: "<<Volumen_Cilindro (radio,altura)<<endl;
+   cout<<endl;
+   cout<<"Realizo: Jorge Raymundo Silva"<<endl;
+   cout<<"Grupo: 1CM11"<<endl;
+   cout<<"Calificacion: 10 =P"<<endl;
+   getch();
+}
+
+
+
+
+#include <iostream.h>
+#include <conio.h>
+#define PI 3.1416
+
+//Declaracion de la Funcion
+
+float Volumen_Cono (void);
+
+//Definicion de la Funcion
+
+float Volumen_Cono (void)
+{
+	float radio, altura, Volumen;
+	cout<<"Volumen de un Cono"<<endl;
+   cout<<"Dar radio"<<endl;
+   cin>>radio;
+   cout<<"Dar altura"<<endl;
+   cin>>altura;
+   Volumen=(0.333)*PI*(radio*radio)*altura;
+   cout<<"El Volumen es: "<<Volumen<<endl;
+}
+//Llamar a la funcion
+
+main ()
+{
+   Volumen_Cono();
+   getch();
+}
+
+
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+#define PI 3.1416
+
+//Declaracion de la funcion
+
+float Volumen_Elipsoide (float, float, float);
+
+//Definicion de la funcion
+
+float Volumen_Elipsoide (float a, float b, float c)
+{
+	float Volumen;
+   Volumen= (0.75)*(PI)*(a)*(b)*(c);
+   return Volumen;
+}
+
+//Llamar a la funcion
+
+main ()
+{
+	float a,b,c;
+	cout<<"Volumen de un Elipsoide"<<endl;
+   cout<<"Dar a"<<endl;
+   cin>>a;
+   cout<<"Dar b"<<endl;
+   cin>>b;
+   cout<<"Dar c"<<endl;
+   cin>>c;
+   cout<<"El Volumen es: "<<Volumen_Elipsoide (a,b,c)<<endl;
+
+   getch();
+}
+
+
+#include <iostream.h>
+#include <conio.h>
+#define PI 3.1416
+
+//Declaracion
+
+float Volumen_Cilindro_Recto (float, float, float);
+
+//Definicion
+
+float Volumen_Cilindro_Recto (float radio, float alt_uno, float alt_dos)
+{
+	float Volumen;
+   Volumen= PI*(radio*radio)*((alt_uno+alt_dos)/2);
+   return Volumen;
+}
+
+//Llamada
+
+main ()
+{
+	float radio, alt_uno, alt_dos;
+
+   cout<<"Volumen de un cilindro recto"<<endl;
+   cout<<"Dar radio"<<endl,
+   cin>>radio;
+   cout<<"Dar altura num. 1"<<endl;
+   cin>>alt_uno;
+   cout<<"Dar altura num. 2"<<endl;
+   cin>>alt_dos;
+   cout<<"El volumen es: "<< Volumen_Cilindro_Recto (radio,alt_uno,alt_dos)<<endl;
+
+   getch();
+}

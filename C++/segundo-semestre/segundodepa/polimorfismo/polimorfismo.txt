@@ -1,0 +1,3 @@
+Dos o mas funciones se puede llamar igual, con la misma cantidad y tipo de parametros
+siempre y cuando esten en clases diferentes y entre ellas exista una relacion de herencia
+eso es polimorfismo en tiempo de ejecucion

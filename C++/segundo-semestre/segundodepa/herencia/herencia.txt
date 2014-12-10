@@ -1,0 +1,136 @@
+En P.O.O herencia se refiere a que una clase recibe los 
+atributos de otra, habiendo entre estas clases una relacion
+de parentesco.
+
+En P.0.0 existen diversas clases de herencias y diversos niveles de herencia
+
+				    HERENCIA SIMPLE
+-------------
+|
+|
+|
+|____________
+      |
+      | Relacion de herencia
+      |
+clase \/ Derivada
+-------------
+|
+|
+|
+|
+|____________
+
+				    HERENCIA MULTIPLE INDIRECTA
+
+
+-------------
+|
+|
+|
+|____________
+      |
+      | Relacion de herencia
+      |
+clase \/ Derivada
+-------------
+|
+|
+|
+|
+|____________
+      |
+      |
+      |
+clase \/ Derivada 2
+-------------
+|
+|
+|
+|
+|____________
+				    HERENCIA MULTIMPLE DIRECTA
+				    
+     Clase base 1                 clase base 2
+-------------                  ----------------- 
+|                              |
+|                              |
+|                              |
+|                              |
+|____________                  _________________
+      |                                |
+      |                                |
+      |          relacion de herancia  |
+      |--------------------------------|
+                       |
+                       |
+                       |
+                       |
+		 clase \/ Derivada 
+		-------------
+		|
+		|
+		|
+		|
+		|____________
+		
+			EXISTEN 3 TIPOS DE RELACION DE HERENCIA
+Herencia Pública:
+	los elementos prublicos de la clase base se heredan como elementos
+	publicos de la clase derivada.
+Herencia Privada:
+	Los elementos privados de la clase base no son accesibles a la clase
+	derivada(aunque si los hereda).
+Herencia Protegida:
+    los elementos privados de la clase base se heredan y solo pueden ser utilizados
+    por los "miembros de la familia".
+-------------------------------------------------------------------------------------------
+* Constructores de las clases derivadas(las que reciben la herencia):
+
+los constructores de una clase derivada siempre deben mandar llamar al constructor
+de su clase base
+
+ejemplo:
+    class vector_xy{
+    private: // cambiar por public, cambiar por protected y ver las diferencias
+	float x,y;
+    public:
+    vector_xy(float, float);
+    float magnitud();
+    };
+    
+    class vector_xyz:public vector_xy{
+	private:
+	float z;
+	public:
+	vector_xyz(float, float, float);
+	float magnitud2();
+	};
+	
+vector_xy::vector_xy(float a=0, float b=0){
+     x = a;
+     y = b;
+     }
+
+float vector_xy::magnitud(){
+	return  (sqrt(x*x+ y*y));
+	}
+vector_xyz::vector_xyz(float aa=0, float bb=0, float cc=0):vector_xy(aa,bb){
+    z = cc;
+    }
+float vector_xyz::magnitud2(){
+    return(sqrt(x*x+y*y+z*z));
+    }
+    
+main(){
+    vecto_xy A(5,2);
+    vector_xyz B(1,2,3);
+
+cout << "la magnitud de A:";
+cout << A.magnitud() << '\n';
+cout << "magnitud de B:";
+cout << B.magnitud2() << '\n';
+}
+
+
+

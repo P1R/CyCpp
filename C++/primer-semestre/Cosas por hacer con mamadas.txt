@@ -1,0 +1,14 @@
+Ordenar lista ascendente
+Ordenar lista descendente
+leer lista 10 elementos
+comentar q pueden ser 0, -, +
+
+Decir cuantos son 0
+
+		son -
+
+		son +
+
+leer lista 15 elementos 
+decir cuantas veces se repite 
+c/numero

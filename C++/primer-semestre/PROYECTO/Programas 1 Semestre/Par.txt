@@ -1,0 +1,40 @@
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+
+main ()
+{
+	int a;
+	cout<<"Dar Num"<<endl;
+   cin>>a;
+
+   if (a%2 == 0)
+   cout<<"El Numero es par"<<endl;
+
+	else
+   cout<<"El Numero no es par"<<endl;
+	getch ();
+}
+
+
+
+#include <iostream.h>
+#include <conio.h>
+#include <math.h>
+
+main ()
+{
+	int a;
+	cout<<"Dar Num"<<endl;
+   cin>>a;
+
+   if (a%2 != 0)
+   cout<<"El Numero es primo"<<endl;
+
+	else
+   cout<<"El Numero no es primo"<<endl;
+	getch ();
+}
+
+
+
